@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FinalProjectEWashApp</string>
+
+
+    <string-array name="vehicle_type">
+        <item>CAR</item>
+        <item>SUV</item>
+        <item>Hatch Back</item>
+    </string-array>
+
+    <string-array name="service_type">
+        <item>DEEP CLEAN</item>
+        <item>DRY CLEAN</item>
+        <item>OUTER SHOWER</item>
+    </string-array>
+</resources>

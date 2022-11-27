@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserSelectServiceFragment">
+
+    <ImageView
+        android:id="@+id/imageViewUserSelect"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/suv" />
+
+    <TextView
+        android:id="@+id/textViewVehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/imageViewUserSelect"
+        android:text="Vehicle Type" />
+
+    <Spinner
+        android:id="@+id/spinnerVehicle"
+        android:layout_width="356dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/textViewVehicle"
+        android:entries="@array/vehicle_type"
+         />
+
+    <TextView
+        android:id="@+id/textViewService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerVehicle"
+        android:layout_marginTop="30dp"
+        android:text="Service Type"
+        />
+
+
+    <Spinner
+        android:id="@+id/spinnerService"
+        android:layout_width="354dp"
+        android:layout_height="38dp"
+        android:entries="@array/service_type"
+        android:layout_below="@id/textViewService"
+         />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Select Date"
+        android:layout_below="@id/spinnerService"
+
+        />
+
+    <DatePicker
+        android:id="@+id/editTextDate"
+        android:layout_width="301dp"
+        android:layout_height="75dp"
+        android:layout_below="@id/textViewDate"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+
+        />
+
+
+</RelativeLayout>
