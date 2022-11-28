@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
 
 class UserSelectServiceFragment : Fragment() {
 
@@ -27,7 +29,12 @@ class UserSelectServiceFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(UserSelectViewModel::class.java)
         // TODO: Use the ViewModel
 
+        val buttonLogin = view?.findViewById<Button>(R.id.btnSelectService)
 
+        buttonLogin?.setOnClickListener {
+            val userConfirmBooking = UserConfirmBookingFragment()
+            fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, userConfirmBooking)?.commit()
+        }
         //Text
     }
 

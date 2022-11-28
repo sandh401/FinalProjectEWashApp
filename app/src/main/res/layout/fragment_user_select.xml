@@ -10,7 +10,7 @@
         android:layout_width="170dp"
         android:layout_height="170dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/suv" />
 
     <TextView
@@ -62,10 +62,21 @@
         android:layout_width="301dp"
         android:layout_height="75dp"
         android:layout_below="@id/textViewDate"
-        android:datePickerMode="spinner"
         android:calendarViewShown="false"
+        android:datePickerMode="spinner"
 
         />
+
+    <Button
+        android:id="@+id/btnSelectService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDate"
+        android:layout_marginTop="30dp"
+        android:text="Confirm Service"
+
+        />
+
 
 
 </RelativeLayout>
