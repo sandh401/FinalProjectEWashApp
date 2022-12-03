@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "321325890546",
+    "project_id": "final-project-adv-android",
+    "storage_bucket": "final-project-adv-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321325890546:android:e1775028a5842d5d61c96b",
+        "android_client_info": {
+          "package_name": "project.st991575494.navjotandranvir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321325890546-qu4o60hbu2fc37h3tu9upvfih9oic8m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyDKBcghF5P2crheFiL2xPZ7Lrin4wPIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321325890546-qu4o60hbu2fc37h3tu9upvfih9oic8m1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

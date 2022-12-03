@@ -3,7 +3,7 @@
 
 
     <string-array name="vehicle_type">
-        <item>CAR</item>
+        <item>SEDAN</item>
         <item>SUV</item>
         <item>Hatch Back</item>
     </string-array>

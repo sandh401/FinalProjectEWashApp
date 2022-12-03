@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/txtViewRequestName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Name: John"
+        />
+
+    <TextView
+        android:id="@+id/txtViewRequestDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Date: 2022-11-29"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/txtViewService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Service: DEEP CLEAN"
+        android:layout_below="@id/txtViewRequestName"
+        />
+
+
+    <TextView
+        android:id="@+id/txtViewCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtViewRequestDate"
+        android:layout_alignStart="@id/txtViewRequestDate"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Service: SUV" />
+
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtViewService"
+        android:layout_margin="10dp"
+        android:text="Accept"
+        />
+
+    <Button
+        android:id="@+id/btnReject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btnAccept"
+        android:layout_alignBaseline="@id/btnAccept"
+        android:layout_margin="10dp"
+        android:text="Reject"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@id/btnAccept"
+        />
+</RelativeLayout>

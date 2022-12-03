@@ -2,35 +2,60 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#8BC34A"
     android:layout_height="match_parent"
     tools:context=".UserConfirmBookingFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Please Confirm Your Booking Details..."
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
 
 
     <TextView
         android:id="@+id/textViewConfirmVehicleType"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/spinner_theme"
+        android:padding="10dp"
         android:text="Vehicle Type:             SEDAN"
-        android:textSize="21sp"
-        android:layout_marginTop="180dp"
-         />
+        android:textSize="21sp" />
 
     <TextView
         android:id="@+id/textViewConfirmServiceType"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Service Type:             DEEP CLEAN"
-        android:layout_marginTop="20dp"
-        android:textSize="21sp"
         android:layout_below="@+id/textViewConfirmVehicleType"
-        />
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_theme"
+        android:padding="10dp"
+
+        android:text="Service Type:             DEEP CLEAN"
+        android:textSize="21sp" />
 
     <TextView
         android:id="@+id/textViewServiceCharges"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewConfirmServiceType"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_theme"
+        android:padding="10dp"
+
         android:text="Service Charges:       160 CAD"
         android:textSize="21sp"
 
@@ -38,10 +63,14 @@
 
     <TextView
         android:id="@+id/textViewServiceTax"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewServiceCharges"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_theme"
+        android:padding="10dp"
         android:text="Tax (13)%:                  20 CAD"
         android:textSize="21sp"
 
@@ -53,12 +82,14 @@
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:layout_below="@id/textViewServiceTax"
+        android:layout_marginHorizontal="20dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_theme"
         android:ems="10"
         android:gravity="left|top"
         android:hint="Additional Notes.."
         android:inputType="textMultiLine"
-        android:textSize="15sp">
+        android:padding="20sp">
 
         <requestFocus />
     </EditText>
@@ -68,8 +99,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextAdditionalNotes"
-        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="Confirm Booking"
 
         />
