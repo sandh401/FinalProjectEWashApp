@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rllayout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#8BC34A"
+    android:background="@color/yello_500"
     android:layout_height="match_parent"
     tools:context=".UserConfirmBookingFragment">
 
@@ -12,11 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_theme"
+        android:padding="5dp"
         android:text="Please Confirm Your Booking Details..."
-        android:textColor="@color/white"
-        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:textSize="13sp"
         android:textStyle="bold" />
-
 
 
     <TextView
@@ -25,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="90dp"
         android:background="@drawable/spinner_theme"
         android:padding="10dp"
         android:text="Vehicle Type:             SEDAN"

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="project.st991575494.navjotandranvir.Auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_userSelectServiceFragment"
+            app:destination="@id/userSelectServiceFragment"
+
+            />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userSelectServiceFragment"
+        android:name="project.st991575494.navjotandranvir.UserSelectServiceFragment"
+        android:label="fragment_user_select"
+        tools:layout="@layout/fragment_user_select" >
+        <action
+            android:id="@+id/action_userSelectServiceFragment_to_userConfirmBookingFragment"
+            app:destination="@id/userConfirmBookingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userConfirmBookingFragment"
+        android:name="project.st991575494.navjotandranvir.UserConfirmBookingFragment"
+        android:label="fragment_user_confirm_booking"
+        tools:layout="@layout/fragment_user_confirm_booking" >
+        <action
+            android:id="@+id/action_userConfirmBookingFragment_to_userSelectServiceFragment"
+            app:destination="@id/userSelectServiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="project.st991575494.navjotandranvir.Auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

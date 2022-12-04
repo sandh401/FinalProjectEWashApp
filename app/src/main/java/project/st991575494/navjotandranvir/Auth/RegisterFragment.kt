@@ -1,17 +1,16 @@
-package project.st991575494.navjotandranvir
+package project.st991575494.navjotandranvir.Auth
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
+import project.st991575494.navjotandranvir.R
 import project.st991575494.navjotandranvir.ViewModels.UserViewModel
 import project.st991575494.navjotandranvir.databinding.FragmentRegisterBinding
 
@@ -37,7 +36,11 @@ class RegisterFragment : Fragment() {
 
         binding.btnRegister.setOnClickListener {
 
-            if(binding.editTextEmail.text.isEmpty() || binding.editTextPassword.text.isEmpty()) return@setOnClickListener
+            if(binding.editTextEmail.text.isEmpty() || binding.editTextPassword.text.isEmpty()){
+                val snack = Snackbar.make(it,"Both Email And Password Are Required", Snackbar.LENGTH_LONG)
+                snack.show()
+                return@setOnClickListener
+            }
 
             sharedViewModel.saveEmail(binding.editTextEmail.text.toString())
             sharedViewModel.savePassword(binding.editTextPassword.text.toString())
@@ -50,7 +53,8 @@ class RegisterFragment : Fragment() {
 
                         task.result.user?.let { it1 -> sharedViewModel.saveUID(it1.uid) }
 
-                        Toast.makeText(requireContext(), "User Registered Successfully", Toast.LENGTH_SHORT )
+                        val snack = Snackbar.make(it,"User Registered Successfully ",Snackbar.LENGTH_LONG)
+                        snack.show()
                         val loginFragment = LoginFragment()
                         fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, loginFragment)?.commit()
 
@@ -59,7 +63,8 @@ class RegisterFragment : Fragment() {
 
 
                     } else {
-                        Toast.makeText(requireContext(), "An error occured, please try again", Toast.LENGTH_SHORT )
+                        val snack = Snackbar.make(it,"An error was encountered while creating user ",Snackbar.LENGTH_LONG)
+                        snack.show()
                     }
                 }
         }

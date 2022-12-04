@@ -1,21 +1,18 @@
-package project.st991575494.navjotandranvir
+package project.st991575494.navjotandranvir.Auth
 
 import android.content.ContentValues.TAG
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
-import project.st991575494.navjotandranvir.ViewModels.LoginViewModel
+import project.st991575494.navjotandranvir.R
+import project.st991575494.navjotandranvir.UserHomeFragment
 import project.st991575494.navjotandranvir.ViewModels.UserViewModel
 import project.st991575494.navjotandranvir.databinding.FragmentLoginBinding
 
@@ -59,7 +56,11 @@ class LoginFragment : Fragment() {
 
 
         binding.btnLogin?.setOnClickListener {
-            if(binding.editTextEmail.text.isEmpty() || binding.editTextPassword.text.isEmpty()) return@setOnClickListener
+            if(binding.editTextEmail.text.isEmpty() || binding.editTextPassword.text.isEmpty()) {
+                val snack = Snackbar.make(it,"Both Email And Password Are Required",Snackbar.LENGTH_LONG)
+                snack.show()
+                return@setOnClickListener
+            }
 
             sharedViewModel= ViewModelProvider(this).get(UserViewModel::class.java)
             FirebaseApp.initializeApp(requireContext());
@@ -67,25 +68,35 @@ class LoginFragment : Fragment() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Log.d(TAG,"User logged in Successfully with Uid " + task.result.user?.uid)
-                        val userSelectFragment = UserSelectServiceFragment()
-                        fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, userSelectFragment)?.commit()
+                        if(binding.editTextEmail.text.toString().equals("admin@ewash.com")){
+                            val fragmentHome = UserHomeFragment()
+                            fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, fragmentHome)?.commit()
+                        }
+                        val fragmentHome = UserHomeFragment()
+                        fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, fragmentHome)?.commit()
 
 
                     } else {
                         Log.d(TAG,"An error occured while logging in")
+                        val snack = Snackbar.make(it,"User not found",Snackbar.LENGTH_LONG)
+                        snack.show()
                     }
+                }
+                .addOnFailureListener { task ->
+
+                    Log.d(TAG,"An error occured while logging in")
                 }
 
 
-            val userSelectFragment = UserSelectServiceFragment()
-            fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, userSelectFragment)?.commit()
+//            val userSelectFragment = UserSelectServiceFragment()
+//            fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, userSelectFragment)?.commit()
         }
 
 
 
         binding.btnSignUp.setOnClickListener {
             val registerFragment = RegisterFragment()
-            fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, registerFragment)?.commit()
+            fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.fragment_container, registerFragment)?.commit()
         }
 
     }

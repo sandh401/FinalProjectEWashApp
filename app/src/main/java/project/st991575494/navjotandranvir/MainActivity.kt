@@ -2,26 +2,28 @@ package project.st991575494.navjotandranvir
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
-import android.view.View
-import com.google.android.gms.common.api.internal.GoogleServices.initialize
-import com.google.firebase.FirebaseApp
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.initialize
+import androidx.navigation.NavController
+import project.st991575494.navjotandranvir.Auth.LoginFragment
+import project.st991575494.navjotandranvir.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var navController : NavController
+    private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-    if(savedInstanceState == null){
-        val fragmentLogin = LoginFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragmentLogin).commit()
+        if(savedInstanceState == null){
+            val fragmentLogin = LoginFragment()
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragmentLogin).commit()
+
         }
 
     }
+
 
 
 }

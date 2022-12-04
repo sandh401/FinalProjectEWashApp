@@ -9,13 +9,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 import project.st991575494.navjotandranvir.Data.Service
+import project.st991575494.navjotandranvir.ViewModels.UserConfirmBookingViewModel
 import project.st991575494.navjotandranvir.databinding.FragmentUserConfirmBookingBinding
-import project.st991575494.navjotandranvir.databinding.FragmentUserSelectBinding
 
 class UserConfirmBookingFragment : Fragment() {
 
@@ -39,19 +38,20 @@ class UserConfirmBookingFragment : Fragment() {
         serviceObj!!.additionalNotes = binding.editTextAdditionalNotes.text.toString();
         serviceObj!!.uid = FirebaseAuth.getInstance().uid
 
-        binding.textViewConfirmVehicleType.setText(String.format("%15s %15s","Vehicle Type: ",serviceObj!!.vehicle))
-        binding.textViewConfirmVehicleType.setText(String.format("%15s %15s","Service Type: ",serviceObj!!.serviceType))
-        binding.textViewConfirmVehicleType.setText(String.format("%15s %15s","Subtotal: ",serviceObj!!.subtotal))
-        binding.textViewConfirmVehicleType.setText(String.format("%15s %15s","Tax(13%): ",serviceObj!!.tax))
+        binding.textViewConfirmVehicleType.setText(String.format("%5s %15s","Vehicle Type: ",serviceObj!!.vehicle))
+        binding.textViewConfirmServiceType.setText(String.format("%5s %15s","Service Type: ",serviceObj!!.serviceType))
+        binding.textViewServiceCharges.setText(String.format("%5s %15s","Subtotal: ",serviceObj!!.subtotal))
+        binding.textViewServiceTax.setText(String.format("%5s %15s","Tax(13%): ",serviceObj!!.tax))
 
         binding.buttonConfirmBooking.setOnClickListener {
 
             FirebaseFirestore.getInstance().collection("service_requests")
                 .add(serviceObj)
                 .addOnSuccessListener {
-                    Toast.makeText(requireContext(), "Booking confirmed, thank you", Toast.LENGTH_SHORT)
-                    val selectServiceFragment = UserSelectServiceFragment()
-                    fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, selectServiceFragment)?.commit()
+
+                   Toast.makeText(context,"Booking Created Successfully", Toast.LENGTH_SHORT).show()
+                    val userHomeFragment = UserHomeFragment()
+                    fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, userHomeFragment)?.commit()
                 }
                 .addOnFailureListener({
                     Log.d(TAG, "not worked")

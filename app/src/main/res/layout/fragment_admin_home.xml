@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin.AdminAcceptRequestFragment">
+    tools:context=".Admin.AdminHomeFragment">
 
-    <include
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/booking_request"
-        />
+        android:layout_height="match_parent"
+        android:text="Hello" />
 
 </FrameLayout>
