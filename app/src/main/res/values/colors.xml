@@ -11,5 +11,11 @@
     <color name="yello_100">#FFF9C4</color>
     <color name="yello_500">#FFEB3B</color>
 
+    <color name="green_100">#C8E6C9</color>
+    <color name="green_500">#8BC34A</color>
+
+    <color name="red_100">#F8BBD0</color>
+    <color name="red_500">#F44336</color>
+
 
 </resources>

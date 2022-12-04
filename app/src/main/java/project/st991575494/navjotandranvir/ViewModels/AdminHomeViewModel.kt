@@ -1,4 +1,4 @@
-package project.st991575494.navjotandranvir.Admin
+package project.st991575494.navjotandranvir.ViewModels
 
 import androidx.lifecycle.ViewModel
 

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="15dp"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="8dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/txtViewTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Total: 82.00"
+            />
+
+        <TextView
+            android:id="@+id/txtViewRequestDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Date: 2022-11-29"
+            android:layout_alignParentRight="true"
+            />
+
+        <TextView
+            android:id="@+id/txtViewService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtViewTotal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Service: DEEP CLEAN" />
+
+
+        <TextView
+            android:id="@+id/txtViewCar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtViewRequestDate"
+            android:layout_alignStart="@id/txtViewRequestDate"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Vehicle: SUV" />
+
+
+        <TextView
+            android:id="@+id/txtViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtViewService"
+            android:layout_alignStart="@id/txtViewService"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Status: Accepted" />
+
+
+        <Button
+            android:id="@+id/btnApprove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtViewStatus"
+            android:layout_alignStart="@id/txtViewStatus"
+            android:backgroundTint="@color/green_500"
+            android:text="Approve" />
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtViewStatus"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btnApprove"
+            android:backgroundTint="@color/red_500"
+            android:text="Decline" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

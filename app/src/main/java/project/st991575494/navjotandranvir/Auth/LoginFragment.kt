@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
+import project.st991575494.navjotandranvir.Admin.AdminHomeFragment
 import project.st991575494.navjotandranvir.R
 import project.st991575494.navjotandranvir.UserHomeFragment
 import project.st991575494.navjotandranvir.ViewModels.UserViewModel
@@ -69,11 +70,14 @@ class LoginFragment : Fragment() {
                     if (task.isSuccessful) {
                         Log.d(TAG,"User logged in Successfully with Uid " + task.result.user?.uid)
                         if(binding.editTextEmail.text.toString().equals("admin@ewash.com")){
-                            val fragmentHome = UserHomeFragment()
+                            val fragmentHome = AdminHomeFragment()
                             fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, fragmentHome)?.commit()
                         }
-                        val fragmentHome = UserHomeFragment()
-                        fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, fragmentHome)?.commit()
+                        else{
+                            val fragmentHome = UserHomeFragment()
+                            fragmentManager?.beginTransaction()?.replace(R.id.fragment_container, fragmentHome)?.commit()
+
+                        }
 
 
                     } else {
