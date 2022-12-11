@@ -1,6 +1,5 @@
 package project.st991575494.navjotandranvir.Admin
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,10 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import project.st991575494.navjotandranvir.Adapter.AdminAcceptedBookingAdapter
-import project.st991575494.navjotandranvir.Adapter.AdminBookingAdapter
 import project.st991575494.navjotandranvir.Data.Service
 import project.st991575494.navjotandranvir.R
-import project.st991575494.navjotandranvir.ViewModels.AdminViewAcceptedBookingsViewModel
 
 
 // This class is reponsible to show the fragment for Accepted Booking Requests
@@ -26,11 +23,7 @@ class AdminViewAcceptedBookingsFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var txtNoData: TextView
 
-    companion object {
-        fun newInstance() = AdminViewAcceptedBookingsFragment()
-    }
 
-    private lateinit var viewModel: AdminViewAcceptedBookingsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -77,10 +70,5 @@ class AdminViewAcceptedBookingsFragment : Fragment() {
             }
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(AdminViewAcceptedBookingsViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }
