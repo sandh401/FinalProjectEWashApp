@@ -11,6 +11,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
+
+// This class is reponsible to populated user  bookings recyclerview
 class UserBookingAdapter (private val bookingList : ArrayList<Service>) : RecyclerView.Adapter<UserBookingAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -21,7 +23,7 @@ class UserBookingAdapter (private val bookingList : ArrayList<Service>) : Recycl
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = bookingList[position]
-
+        //set the values in the views
         holder.vehicle.text = String.format("%s %5s","Vehicle: ",currentItem.vehicle)
         holder.total.text = String.format("%s %5s","Total: ",currentItem.total.toString())
         holder.service.text = String.format("%s %5s","Service: ",currentItem.serviceType)
@@ -36,7 +38,7 @@ class UserBookingAdapter (private val bookingList : ArrayList<Service>) : Recycl
     }
 
     public class MyViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        // create holder views
         val total : TextView = itemView.findViewById(R.id.txtViewTotal)
         val status : TextView = itemView.findViewById(R.id.txtViewStatus)
         val vehicle : TextView = itemView.findViewById(R.id.txtViewCar)

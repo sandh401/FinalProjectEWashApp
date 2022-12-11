@@ -11,6 +11,8 @@ import project.st991575494.navjotandranvir.UserViewBookingFragment
 import project.st991575494.navjotandranvir.ViewModels.AdminHomeViewModel
 import project.st991575494.navjotandranvir.databinding.FragmentAdminHomeBinding
 
+// Home Page of Admin
+
 class AdminHomeFragment : Fragment() {
 
 
@@ -29,10 +31,28 @@ class AdminHomeFragment : Fragment() {
 
         binding = FragmentAdminHomeBinding.inflate(inflater, container, false)
 
+        // Go View all bookings page to approve and decline
         binding.btnViewBooking.setOnClickListener {
 
             val fragmentViewBooking = AdminViewBookingFragment()
             fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.fragment_container, fragmentViewBooking)?.commit()
+        }
+
+
+        // Go View all accepted bookings page
+
+        binding.btnViewAcceptedBooking.setOnClickListener {
+            val fragmentViewBooking = AdminViewAcceptedBookingsFragment()
+            fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.fragment_container, fragmentViewBooking)?.commit()
+        }
+
+
+        // Go View all rejected bookings page
+        binding.btnViewRejectedBooking.setOnClickListener {
+
+            val fragmentViewBooking = AdminViewDeclinedBookingsFragment()
+            fragmentManager?.beginTransaction()?.addToBackStack(null)?.replace(R.id.fragment_container, fragmentViewBooking)?.commit()
+
         }
 
         return binding.root

@@ -19,6 +19,7 @@ import project.st991575494.navjotandranvir.R
 import project.st991575494.navjotandranvir.ViewModels.AdminViewBookingViewModel
 import project.st991575494.navjotandranvir.ViewModels.UserViewBookingViewModel
 
+// This class is reponsible to show the fragment for Pending Booking Requests
 class AdminViewBookingFragment : Fragment() {
 
 
@@ -48,19 +49,20 @@ class AdminViewBookingFragment : Fragment() {
         recyclerView.layoutManager = layoutManager
 
         bookingList = arrayListOf()
-
+// Get the documents from the collection serivce_requests
         FirebaseFirestore.getInstance().collection("service_requests").get()
             .addOnSuccessListener {
                 if(!it.isEmpty){
                     for (data in it.documents){
                         val booking: Service? = data.toObject(Service::class.java)
-                        if(booking != null){
+                        booking!!.sid = data.id // set the service booking id to the document id
+                        if(booking != null  && booking.status.equals("pending", true)){ // fill on approved requests
                             bookingList.add(booking)
                         }
                     }
 
                     if(bookingList.size > 0){
-                        recyclerView.adapter = AdminBookingAdapter(bookingList)
+                        recyclerView.adapter = AdminBookingAdapter(bookingList) // set the Adapter
                     }
                     else{
                         txtNoData.text = "No Booking Requests Found";

@@ -15,4 +15,6 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">Final project Fall 2022\n\n\n\t\t\t\t\t\t\t\tApp developers\n1. Navjot Sandhu (991593460)\n2. Ranvir Singh (991575494) \n\n\n Submission Date: 12/11/2022</string>
+    <string name="help">1. First select your vehicle type\n\n\n2. Select your desired service\n\n\n3.Select date of booking\n\n\n4. Verify the final amount with taxes\n\n\n5.Select confirm booking</string>
 </resources>

@@ -22,7 +22,21 @@
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
-            android:text="View All Bookings" />
+            android:text="Accept Bookings" />
+
+        <Button
+            android:id="@+id/btnViewAcceptedBooking"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="View Accepted Bookings" />
+
+        <Button
+            android:id="@+id/btnViewRejectedBooking"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:text="View Rejected Bookings" />
 
     </LinearLayout>
 

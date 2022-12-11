@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import project.st991575494.navjotandranvir.ViewModels.UserHomeViewModel
 import project.st991575494.navjotandranvir.databinding.FragmentUserHomeBinding
-
+// This class is reponsible to show the home page of user
 class UserHomeFragment : Fragment() {
 
     companion object {

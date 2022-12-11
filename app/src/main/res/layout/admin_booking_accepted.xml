@@ -71,27 +71,17 @@
             android:text="Status: Accepted" />
 
 
-        <Button
+        <TextView
             android:id="@+id/btnApprove"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtViewStatus"
             android:layout_alignStart="@id/txtViewStatus"
-            android:backgroundTint="@color/green_500"
-            android:text="Approve" />
-
-
-        <Button
-            android:id="@+id/btnDecline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/txtViewStatus"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/btnApprove"
-            android:backgroundTint="@color/red_500"
-            android:text="Cancel" />
-
-
+            android:background="@drawable/green_ribbon_theme"
+            android:text="ACCEPTED"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
 
 
     </RelativeLayout>

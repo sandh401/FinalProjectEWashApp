@@ -3,8 +3,10 @@ package project.st991575494.navjotandranvir.Data;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 
+// This class is reponsible to store Service object data for read and write on Firestore
 public class Service implements Serializable {
 
+    private String sid;
     private String vehicle;
     private String status = "pending";
     private String serviceType;
@@ -125,5 +127,13 @@ public class Service implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getSid() {
+        return sid;
+    }
+
+    public void setSid(String sid) {
+        this.sid = sid;
     }
 }

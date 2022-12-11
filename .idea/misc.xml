@@ -3,15 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.299" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/drawable/button_theme.xml" value="0.1405" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/drawable/green_ribbon_theme.xml" value="0.1755" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.299" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.299" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/drawable/red_ribbon_theme.xml" value="0.1755" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/drawable/spinner_theme.xml" value="0.299" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/activity_main.xml" value="0.18854166666666666" />
-        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/admin_booking.xml" value="0.3038949275362319" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/admin_booking.xml" value="0.4" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/admin_booking_accepted.xml" value="0.4" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/admin_booking_rejected.xml" value="0.25271739130434784" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/booking.xml" value="0.36" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/booking_request.xml" value="0.3" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_about.xml" value="0.2" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_admin_accept_request.xml" value="0.17857142857142858" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_admin_home.xml" value="0.3038949275362319" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_admin_view_accepted_booking.xml" value="0.25271739130434784" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_admin_view_accepted_bookings.xml" value="0.25271739130434784" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_admin_view_booking.xml" value="0.3038949275362319" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_admin_view_declined_bookings.xml" value="0.25271739130434784" />
+        <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_help.xml" value="0.18854166666666666" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_login.xml" value="0.268" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_register.xml" value="0.2" />
         <entry key="..\:/Temp/Temp/2611/Android/AdvanceAndroid/FinalProjectEWashApp/app/src/main/res/layout/fragment_user_confirm_booking.xml" value="0.3" />

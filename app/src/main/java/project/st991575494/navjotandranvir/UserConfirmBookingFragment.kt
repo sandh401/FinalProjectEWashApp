@@ -16,6 +16,8 @@ import project.st991575494.navjotandranvir.Data.Service
 import project.st991575494.navjotandranvir.ViewModels.UserConfirmBookingViewModel
 import project.st991575494.navjotandranvir.databinding.FragmentUserConfirmBookingBinding
 
+// This class is reponsible to confirm the user booking
+
 class UserConfirmBookingFragment : Fragment() {
 
     companion object {

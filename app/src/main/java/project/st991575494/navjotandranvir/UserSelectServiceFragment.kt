@@ -12,6 +12,7 @@ import project.st991575494.navjotandranvir.Data.Service
 import project.st991575494.navjotandranvir.ViewModels.UserViewModel
 import project.st991575494.navjotandranvir.databinding.FragmentUserSelectBinding
 
+// This class is reponsible to show the fragment for Selecting the service page
 class UserSelectServiceFragment : Fragment() {
 
     companion object {
